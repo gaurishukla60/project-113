@@ -11,15 +11,26 @@ function setup() {
   }
   
   function draw() {
-    image(video,0,0,640,480);
-    tint(tint_color);
-
+    image(video,190,150,240,180);
+     circle(50,50,60);
+    fill(160,0,0);
+    circle(320,50,60);
+    fill(160,0,0);
+    circle(50,430,60);
+    fill(160,0,0);
+    circle(50,230,60);
+    fill(160,0,0);
+    circle(590,50,60);
+    fill(160,0,0);
+    circle(590,230,60);
+    fill(160,0,0);
+    circle(590,430,60);
+    fill(160,0,0);
+    circle(320,430,60);
+    fill(160,0,0);
   }
  function take_snapshot()
  {
     save('gauri.png');
  }
- function filter_tint()
- {
-    tint_color=document.getElementById("color_name").value;
- }
+  
