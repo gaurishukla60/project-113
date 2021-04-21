@@ -1,5 +1,7 @@
+nosex=0;
+nosey=0;
 function preload() {
-
+clown_nose=loadImage('https://i.postimg.cc/3x3QzSGq/m.png');
 }
 
 function setup(){
@@ -18,14 +20,18 @@ function modelLoaded()
 }
 function draw(){
 image(video,0,0,300,300);
+image(clown_nose,nosex,nosey,30,30);
 }
 function gotPoses(results)
     {
 console.log(results);
-console.log("nose x= "+ results[0].pose.nose.x);
-console.log("nose y= "+ results[0].pose.nose.y);
+nosex=results[0].pose.nose.x-15;
+nosey=results[0].pose.nose.y;
+console.log("nose x= "+  nosex);
+console.log("nose y= "+  nosey);
 
     }
+
 function take_snapshot(){
     save('myfilterimage.png');
 }
